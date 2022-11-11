@@ -173,7 +173,7 @@ async function handleAnswer(isCorrect, concepts) {
     if (currentQuestionIndex < questionList.length) {
       await displayQuestion(currentQuestionIndex);
     } else {
-      process.exit(1);
+      await displayWinningMsg();
     }
   } else {
     spinner.error({
@@ -207,4 +207,30 @@ async function displayQuestion(index) {
     answer.question === choices[correctAnswerIndex],
     concepts
   );
+}
+
+async function displayWinningMsg() {
+  console.clear();
+  const msg = `Congrats! ${playerName}! \n\nYou really crash them all!`;
+  figlet(msg, async (err, result) => {
+    console.log(gradient.pastel.multiline(result));
+
+    await delay(1000);
+    console.log(
+      chalk.yellow("In case you're wondering what's the grand prize....")
+    );
+    await delay(1000);
+    console.log(
+      chalk.yellow(
+        "I really don't have much to offer, but you can check out my blog post about series of js interview questions for more pracitice!"
+      )
+    );
+    await delay(1000);
+    console.log(
+      chalk.cyan(
+        "Here you go! Hope you enjoy the game! https://eruditeness.news.blog/tag/2021iron/"
+      )
+    );
+    process.exit(1);
+  });
 }
