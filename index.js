@@ -17,7 +17,7 @@ const questionList = [
       "None of the above",
     ],
     correctAnswerIndex: 3,
-    concepts: ["scope", "Danny", "wang"],
+    concepts: ["scope"],
   },
   {
     id: 2,

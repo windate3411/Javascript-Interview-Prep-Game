@@ -4,7 +4,13 @@
   "description": "A simple command line game to help interviewer prep for some core javascript interview questions",
   "main": "index.js",
   "type": "module",
-  "scripts": {},
+  "scripts": {
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/windate3411/Javascript-Interview-Prep-Game"
+  },
   "keywords": [
     "javascript",
     "interview-prep",

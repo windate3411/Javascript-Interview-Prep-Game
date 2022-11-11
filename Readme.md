@@ -18,12 +18,12 @@ It's a simple command line game for people preparing for junior level technical 
 - Type the following command in your terminal and you're good to go!
 
 ```
-npm
+npx javascript-interview-prep
 ```
 
 ## Authors
 
-[Danny Wang]()
+[Danny Wang](https://github.com/windate3411)
 
 ## Version History
 
