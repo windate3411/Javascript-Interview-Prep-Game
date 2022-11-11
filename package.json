@@ -1,6 +1,6 @@
 {
   "name": "javascript-interview-prep",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "A simple command line game to help interviewer prep for some core javascript interview questions",
   "main": "index.js",
   "type": "module",
