@@ -6,6 +6,14 @@ Challenge your javascript understanding for job interviews through a simple comm
 
 It's a simple command line game for people preparing for junior level technical interviews by answering series of javascript interview questions.
 
+For every question you'll get various options, and there's only ONE correct answer for each question.
+
+![demo preview1](https://i.imgur.com/uLUbhAZ.png)
+
+If you got the answer wrong, the game would be immediately terminated and you'll see what javascript concepts you need to work on.
+
+![demo preview2](https://i.imgur.com/ldsA1OF.png)
+
 ## Getting Started
 
 ### Prerequisites
@@ -27,5 +35,9 @@ npx javascript-interview-prep
 
 ## Version History
 
+- 1.2.0
+  - Add questions 11 ~ 25
+- 1.1.0
+  - Add Winning Conditions
 - 1.0.0
   - Initial Release

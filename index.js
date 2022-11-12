@@ -331,8 +331,8 @@ async function handleAnswer(isCorrect, concepts) {
     });
     const msg = `
       Looks like you are not that familiar with the following concepts
-
-      ${concepts.join(", ")}
+      
+      =====> ${concepts.join(", ")} <=====
 
       Do not fear, master the concepts then come back for another try....  
     `;
