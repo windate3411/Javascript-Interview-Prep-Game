@@ -11,7 +11,7 @@ const questionList = [
   {
     id: 1,
     codeSnippet:
-      "\nfunction demo() {\n  var a = 5;\n  for (let i = 0; i < 1; i++) {\n    let b = 10\n  }\n  console.log(a)\n  console.log(b)\n}\n",
+      "\nfunction demo() {\n  var a = 5;\n  for (let i = 0; i < 1; i++) {\n     let b = 10\n  }\n  console.log(a)\n  console.log(b)\n}\n\ndemo()\n",
     choices: [
       "5 10",
       "5 undefined",
