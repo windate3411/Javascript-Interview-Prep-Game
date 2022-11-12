@@ -112,6 +112,156 @@ const questionList = [
     correctAnswerIndex: 3,
     concepts: ["scope", "event loop"],
   },
+  {
+    id: 11,
+    codeSnippet:
+      "\nconst addNum = (num) => {\n  return (arg) => {\n    return num + arg\n  }\n}\n\nconst add2 = addNum(2)\nconsole.log(add2(10))\n",
+    choices: ["2", "10", "12", "None of the above"],
+    correctAnswerIndex: 2,
+    concepts: ["scope", "closure"],
+  },
+  {
+    id: 12,
+    codeSnippet:
+      "\nconst arr = [1, 2, 3, 4]\nconst x = arr.push(5)\nconst y = arr.pop()\n\nconsole.log(x === y)\n",
+    choices: ["true", "false"],
+    correctAnswerIndex: 0,
+    concepts: ["array methods"],
+  },
+  {
+    id: 13,
+    codeSnippet:
+      "\nconst arrA = [5, 3, 2, 1, 7];\nconst arrB = [1, 2, 3, 5, 7];\narrA.sort();\nconsole.log(arrA === arrB)\n",
+    choices: ["true", "false"],
+    correctAnswerIndex: 1,
+    concepts: ["array methods", "call by reference"],
+  },
+  {
+    id: 14,
+    codeSnippet:
+      "\nconst arr = [1, 2, 5, 2, 3, 4];\n\nconst checkTwo = (num) => {\n  return num === 2\n}\n\nconst resultA = arr.find(checkTwo)\nconst resultB = arr.filter(checkTwo)\n\nconsole.log(resultA)\nconsole.log(resultB)\n",
+    choices: ["2 [2, 2]", "[2, 2] [2, 2]", "[2, 2] 2", "None of the above"],
+    correctAnswerIndex: 0,
+    concepts: ["array methods"],
+  },
+  {
+    id: 15,
+    codeSnippet:
+      "\nconst arr = [1, 2, 3, 4, 5]\nconst newArr = arr.map(item => {\n  item * 2\n})\nconsole.log(newArr)\n",
+    choices: ["[2, 4, 6, 8, 10]", "[1, 2, 3, 4, 5]", "None of the above"],
+    correctAnswerIndex: 2,
+    concepts: ["array methods"],
+  },
+  {
+    id: 16,
+    codeSnippet:
+      "\nconst arr = [1, 2, 3, 4, 5]\nconst newArr = arr.map(item => {\n  item * 2\n})\nconsole.log(newArr)\n",
+    choices: ["[2, 4, 6, 8, 10]", "[1, 2, 3, 4, 5]", "None of the above"],
+    correctAnswerIndex: 2,
+    concepts: ["array methods"],
+  },
+  {
+    id: 17,
+    codeSnippet:
+      "\nvar name = 'globalName'\nvar auntie = {\n  name: 'localName',\n  callName: function () { \n    console.log(this.name);\n  },\n  callName2: () => { \n    console.log(this.name);\n  }\n }\n auntie.callName();\n auntie.callName2();\n",
+    choices: [
+      "undefined globalName",
+      "globalName localName",
+      "localName globalName",
+      "None of the above",
+    ],
+    correctAnswerIndex: 2,
+    concepts: ["this"],
+  },
+  {
+    id: 18,
+    codeSnippet:
+      "\nvar hero = {\n    _name: 'Danny Wang',\n    getSecretIdentity: function (){\n        return this._name;\n    }\n};\n\nvar stoleSecretIdentity = hero.getSecretIdentity;\n\nconsole.log(stoleSecretIdentity());\nconsole.log(hero.getSecretIdentity());\n",
+    choices: [
+      "Danny Wang Danny Wang",
+      "Danny Wang undefined",
+      "undefined Danny Wang",
+      "undefined undefined",
+    ],
+    correctAnswerIndex: 2,
+    concepts: ["this"],
+  },
+  {
+    id: 19,
+    codeSnippet:
+      "\nvar count = 50\n\nconst obj = {\n  count: 100\n}\n\nfunction getCount() {\n  return this.count\n}\n\nconst countA = getCount.call(obj)\nconst countB = getCount()\nconst countC = getCount.apply(obj, [])\n\nconsole.log(countA, countB, countC)\n",
+    choices: [
+      "50 50 100",
+      "100 50 100",
+      "50 undefined 100",
+      "100 50 undefined",
+    ],
+    correctAnswerIndex: 2,
+    concepts: ["this"],
+  },
+  {
+    id: 20,
+    codeSnippet:
+      "\nconsole.log('start')\n\nconst promise1 = new Promise((resolve, reject) => {\n  console.log(1)\n})\n\nconsole.log('end');\n",
+    choices: ["start 1 end", "start end 1", "start end", "None of the above"],
+    correctAnswerIndex: 0,
+    concepts: ["promise", "event loop"],
+  },
+  {
+    id: 21,
+    codeSnippet:
+      "\nconsole.log(1)\nsetTimeout(()=> {\n  console.log(2)\n}, 100)\nsetTimeout(()=> {\n  console.log(3)\n}, 0)\nconsole.log(4)\n",
+    choices: ["1 3 4 2", "1 4 2 3", "1 4 3 2", "None of the above"],
+    correctAnswerIndex: 2,
+    concepts: ["event loop"],
+  },
+  {
+    id: 22,
+    codeSnippet:
+      "\nconsole.log('start');\n\nconst promise1 = new Promise((resolve, reject) => {\n  console.log(1)\n  resolve(2)\n})\n\npromise1.then(res => {\n  console.log(res)\n})\n\nconsole.log('end');\n",
+    choices: [
+      "start end 1 2",
+      "start end 2 1",
+      "start 1 end 2",
+      "None of the above",
+    ],
+    correctAnswerIndex: 2,
+    concepts: ["event loop", "promise"],
+  },
+  {
+    id: 23,
+    codeSnippet:
+      "\nsetTimeout(() => console.log('timeout'));\n\nPromise.resolve()\n  .then(() => console.log('promise'));\n\nconsole.log('global');\n",
+    choices: [
+      "timeout promise global",
+      "timeout global promise",
+      "promise timeout global",
+      "None of the above",
+    ],
+    correctAnswerIndex: 3,
+    concepts: ["event loop", "promise", "micro task"],
+  },
+  {
+    id: 24,
+    codeSnippet:
+      "\nconst promise = new Promise((resolve,reject)=> {\n  console.log(1)\n  resolve(5)\n  console.log(2)\n  reject(6)\n})\n\npromise.then((value)=> {\n  console.log(value)\n  console.log(3)\n}).catch(value => {\n  console.log(value)\n})\n\nconsole.log(4)\n",
+    choices: ["1 2 3 4 5", "1 2 3 4 6", "1 2 4 3 5", "None of the above"],
+    correctAnswerIndex: 3,
+    concepts: ["promise", "event loop"],
+  },
+  {
+    id: 25,
+    codeSnippet:
+      "\nconsole.log(1);\n\nsetTimeout(() => {\n  console.log(2);\n  Promise.resolve().then(() => {\n    console.log(3)\n  });\n}, 0);\n\nnew Promise((resolve, reject) => {\n  console.log(4)\n  resolve(5)\n}).then((data) => {\n  console.log(data);\n})\n\nsetTimeout(() => {\n  console.log(6);\n}, 0)\n\nconsole.log(7);\n",
+    choices: [
+      "1 4 7 5 2 3 6",
+      "1 7 2 3 4 5 6",
+      "1 4 7 2 6 3 5",
+      "None of the above",
+    ],
+    correctAnswerIndex: 0,
+    concepts: ["event loop", "promise", "micro task"],
+  },
 ];
 
 let playerName;
