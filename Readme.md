@@ -8,7 +8,7 @@ It's a simple command line game for people preparing for junior level technical 
 
 For every question you'll get various options, and there's only ONE correct answer for each question.
 
-![demo preview1](https://i.imgur.com/uLUbhAZ.png)
+![demo preview1](https://i.imgur.com/eQJLuRP.png)
 
 If you got the answer wrong, the game would be immediately terminated and you'll see what javascript concepts you need to work on.
 

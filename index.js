@@ -19,7 +19,7 @@ const questionList = [
       "None of the above",
     ],
     correctAnswerIndex: 3,
-    concepts: ["scope"],
+    concepts: ["scope", "null & undefined & not defined"],
   },
   {
     id: 2,
@@ -155,10 +155,10 @@ const questionList = [
   {
     id: 16,
     codeSnippet:
-      "\nconst arr = [1, 2, 3, 4, 5]\nconst newArr = arr.map(item => {\n  item * 2\n})\nconsole.log(newArr)\n",
-    choices: ["[2, 4, 6, 8, 10]", "[1, 2, 3, 4, 5]", "None of the above"],
+      "\nconst arrA = [1, 2, 3]\nconst arrB = [...arrA]\nconst arrC = arrA\n\narrB.push(4)\narrC.push(5)\n\nconsole.log(arrA)\n",
+    choices: ["[1, 2, 3]", "[1, 2, 3, 4]", "[1, 2, 3, 5]", "[1, 2, 3, 4, 5]"],
     correctAnswerIndex: 2,
-    concepts: ["array methods"],
+    concepts: ["array methods", "call by reference", "spread operator"],
   },
   {
     id: 17,
