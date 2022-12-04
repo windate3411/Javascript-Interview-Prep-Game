@@ -196,7 +196,7 @@ const questionList = [
       "50 undefined 100",
       "100 50 undefined",
     ],
-    correctAnswerIndex: 2,
+    correctAnswerIndex: 1,
     concepts: ["this"],
   },
   {
